@@ -8,10 +8,11 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { label: "Portafolio", href: "#portafolio" },
-    { label: "Sobre mí", href: "#sobre-mi" },
-    { label: "Proyectos", href: "#proyectos" },
-    { label: "Contacto", href: "#contacto" },
+    { label: "Inicio", href: "/" },
+    { label: "Portafolio", href: "/#portafolio" },
+    { label: "Proyectos", href: "/#proyectos" },
+    { label: "Mini Juegos", href: "/mini-juegos" },
+    { label: "Contacto", href: "/#contacto" },
   ];
 
   return (
