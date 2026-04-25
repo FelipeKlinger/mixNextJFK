@@ -3,11 +3,11 @@ import { HeroGeometric } from "@/components/ui/shape-landing-hero";
 
 const Hero = () => {
   return (
-    <section id="portafolio" className="w-full">
+    <section id="portafolio" className="mx-auto w-full max-w-7xl">
       <HeroGeometric
-        badge="Kokonut UI"
-        title1="Elevate Your"
-        title2="Digital Vision"
+        badge="Portfolio de Producto & Frontend"
+        title1="Diseño con"
+        title2="Sabor y Dirección"
       />
     </section>
   );

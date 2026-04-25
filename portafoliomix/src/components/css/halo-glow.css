@@ -1,13 +1,28 @@
 #halo-glow {
-  position: absolute;
-  width: 120px;
-  height: 120px;
-  background: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 0.9),
-    rgba(255, 255, 255, 1)
-  );
+  position: fixed;
+  left: var(--glow-x, 50%);
+  top: var(--glow-y, 50%);
+  width: clamp(220px, 28vw, 380px);
+  aspect-ratio: 1;
+  border-radius: 999px;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(255, 180, 120, 0.36), rgba(255, 180, 120, 0.04) 56%, transparent 72%),
+    radial-gradient(circle at 35% 38%, rgba(95, 175, 255, 0.24), transparent 66%);
   pointer-events: none;
   transform: translate(-50%, -50%);
-  filter: blur(100px);
+  filter: blur(42px) saturate(120%);
+  mix-blend-mode: screen;
+  opacity: 0.8;
+  z-index: 0;
+  transition: opacity 280ms ease;
+}
+
+.dark #halo-glow {
+  opacity: 0.5;
+}
+
+@media (pointer: coarse) {
+  #halo-glow {
+    display: none;
+  }
 }
